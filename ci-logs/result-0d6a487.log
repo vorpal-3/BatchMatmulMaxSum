@@ -1,0 +1,141 @@
+=== commit 0d6a4875e34575e7353b1bd6969736aaf5d280f6 ===
+=== host: aarch64 5.10.0-182.0.0.95.r3582_286.hce2.aarch64 ===
+=== cmd: bash run.sh (in work) ===
+
+=== [1/4] Set CANN env ===
+=== [2/4] Build ===
+-- System processer: aarch64
+-- CMAKE_ASC_COMPILER: /home/developer/Ascend/cann-9.0.0/bin/bisheng
+-- ASCEND_CANN_PACKAGE_LINUX_PATH: /home/developer/Ascend/cann-9.0.0/aarch64-linux
+-- CMAKE_ASC_LLD_LINKER: /home/developer/Ascend/cann-9.0.0/aarch64-linux/ccec_compiler/bin/ld.lld
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/workspace/proj/work/build
+[ 50%] Building ASC object CMakeFiles/batch_matmul_max_sum_custom.dir/main.asc.o
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:357:14: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+             ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:357:35: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+                                  ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:357:56: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+                                                       ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:357:76: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+                                                                           ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:358:14: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)g_ws,
+             ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:359:14: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)g_tiling,
+             ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:363:14: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+             ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:363:35: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+                                  ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:363:56: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+                                                       ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:363:76: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)x1, (__gm__ uint8_t*)x2, (__gm__ uint8_t*)y, (__gm__ uint8_t*)g_mm,
+                                                                           ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:364:14: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)g_ws,
+             ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+In file included from /mnt/workspace/proj/work/main.asc:32:
+/mnt/workspace/proj/work/kernel.asc:365:14: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+            (__gm__ uint8_t*)g_tiling,
+             ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+/mnt/workspace/proj/work/main.asc:78:17: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+    run_kernel((GM_ADDR)inputDevice_x1, info_x1, (GM_ADDR)inputDevice_x2, info_x2, (GM_ADDR)outputDevice_y, info_y, availableCoreNum, stream, transposeX1, transposeX2);
+                ^~~~~~~
+/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/utils/kernel_utils_macros.h:23:17: note: expanded from macro 'GM_ADDR'
+#define GM_ADDR __gm__ uint8_t*
+                ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+/mnt/workspace/proj/work/main.asc:78:51: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+    run_kernel((GM_ADDR)inputDevice_x1, info_x1, (GM_ADDR)inputDevice_x2, info_x2, (GM_ADDR)outputDevice_y, info_y, availableCoreNum, stream, transposeX1, transposeX2);
+                                                  ^~~~~~~
+/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/utils/kernel_utils_macros.h:23:17: note: expanded from macro 'GM_ADDR'
+#define GM_ADDR __gm__ uint8_t*
+                ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+/mnt/workspace/proj/work/main.asc:78:85: warning: 'cce_global' attribute ignored when parsing type [-Wignored-attributes]
+    run_kernel((GM_ADDR)inputDevice_x1, info_x1, (GM_ADDR)inputDevice_x2, info_x2, (GM_ADDR)outputDevice_y, info_y, availableCoreNum, stream, transposeX1, transposeX2);
+                                                                                    ^~~~~~~
+/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/utils/kernel_utils_macros.h:23:17: note: expanded from macro 'GM_ADDR'
+#define GM_ADDR __gm__ uint8_t*
+                ^~~~~~
+/home/developer/Ascend/cann-9.0.0/tools/bisheng_compiler/lib/clang/15.0.5/include/__clang_cce_defines.h:61:31: note: expanded from macro '__gm__'
+#define __gm__ __attribute__((cce_global))
+                              ^~~~~~~~~~
+15 warnings generated.
+[100%] Linking ASC executable batch_matmul_max_sum_custom
+[100%] Built target batch_matmul_max_sum_custom
+=== [3/4] Gen test data ===
+Generated test data and golden output for 1 cases.
+=== [4/4] Run + Verify ===
+[ERROR] aclInit(nullptr) failed at /mnt/workspace/proj/work/main.asc:40, ret=500000
+=== FAILED (kernel exited non-zero or timed out) ===
+
+=== EXIT=1 ===
