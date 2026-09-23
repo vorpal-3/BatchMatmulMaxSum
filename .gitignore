@@ -1,0 +1,16 @@
+﻿# --- local, never archived ---
+.venv/
+
+# --- third-party corpus: reproducible via kb/fetch_corpus.py, do not vendor ---
+kb/corpus/
+kb/index.jsonl
+
+# --- build output ---
+work/build/
+**/build/
+*.o
+*.bin
+
+# --- scratch ---
+__pycache__/
+*.pyc

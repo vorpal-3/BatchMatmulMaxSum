@@ -1,0 +1,15 @@
+{
+  "version": "v001",
+  "file": "versions/kernel.v001.asc",
+  "sha256": "3c6f619449cf542979b7451f68ba7453fbe0ec9ea17e1bc9399a8dad86841e10",
+  "bytes": 1171,
+  "archived_at": "2026-09-23T05:54:50.867134+00:00",
+  "hypothesis": "baseline: 组委会 kernel.asc 骨架，run_kernel 为空，不做任何计算",
+  "expected_effect": "仅占位，预期精度全挂",
+  "local_verification": "none",
+  "local_verification_detail": "",
+  "official_submission_id": null,
+  "official_mean_score": null,
+  "ledger_round": null,
+  "notes": ""
+}
