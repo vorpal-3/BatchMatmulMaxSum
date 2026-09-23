@@ -1,0 +1,15 @@
+{
+  "version": "v002",
+  "file": "versions/kernel.v002.asc",
+  "sha256": "6948a03e7504620f7dff7e36512ae87c9dedc633d82552a7cd46891ed1466493",
+  "bytes": 16569,
+  "archived_at": "2026-09-23T06:03:52.737711+00:00",
+  "hypothesis": "V0: __mix__(1,2) 单核融合，AIC 做 ND2NZ+Mmad+Fixpipe(L0C->GM)，AIV 从 GM 读回做 ReduceMax(AR)+ReduceSum(AR)；2201 无 UB 直通故走 GM 中转",
+  "expected_effect": "目标：编译通过并至少启动 1 个 kernel",
+  "local_verification": "none",
+  "local_verification_detail": "",
+  "official_submission_id": null,
+  "official_mean_score": null,
+  "ledger_round": null,
+  "notes": ""
+}

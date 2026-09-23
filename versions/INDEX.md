@@ -6,3 +6,4 @@
 | 版本 | sha256[:12] | 本地验证 | 官方均分 | submission | 假设 |
 |---|---|---|---|---|---|
 | v001 | `3c6f619449cf` | none | — | — | baseline: 组委会 kernel.asc 骨架，run_kernel 为空，不做任何计算 |
+| v002 | `6948a03e7504` | none | — | — | V0: __mix__(1,2) 单核融合，AIC 做 ND2NZ+Mmad+Fixpipe(L0C->GM)，AIV 从 GM 读回... |
