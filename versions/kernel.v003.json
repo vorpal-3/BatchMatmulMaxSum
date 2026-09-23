@@ -1,0 +1,15 @@
+{
+  "version": "v003",
+  "file": "versions/kernel.v003.asc",
+  "sha256": "b2c2b086f7815beb5f86f5c4a983421e6fb140058f4904cddffbe97fa6a0fc69",
+  "bytes": 16327,
+  "archived_at": "2026-09-23T06:04:36.688963+00:00",
+  "hypothesis": "V0.1: 按编译器反馈修正——wsGm[offset] 直接作为张量实参（去掉多余 SetGlobalBuffer）；ReduceMax/ReduceSum 改用官方 reducemax.asc 的 4 参形式 (dst,src,srcShape,true)",
+  "expected_effect": "消除 SetGlobalBuffer 与 reduce 重载两类编译错误",
+  "local_verification": "none",
+  "local_verification_detail": "",
+  "official_submission_id": null,
+  "official_mean_score": null,
+  "ledger_round": null,
+  "notes": ""
+}
