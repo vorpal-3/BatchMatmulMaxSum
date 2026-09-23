@@ -1,0 +1,5 @@
+# kernel.asc is archived as raw bytes and its sha256 is the version identity.
+# Line-ending normalisation would silently change that identity, and CRLF can also
+# affect compilation on the Linux CANN machine. So disable EOL conversion entirely:
+# what was committed is what will be read back, byte for byte.
+* -text
