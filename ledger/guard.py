@@ -38,7 +38,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 LEDGER = HERE / "ledger.jsonl"
 
 MAX_PER_DAY = 50
-MIN_INTERVAL_SECONDS = 120
+MIN_INTERVAL_SECONDS = 180
 
 
 def load() -> list:
