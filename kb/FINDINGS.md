@@ -124,6 +124,29 @@ bisheng: error: clang frontend command failed with exit code 70
 
 **证据**：赛事规则页 + 题目元数据（`gitcode` 活动接口与 CANNJudge 题目接口）。
 
+## F11｜失败模式目录（A）
+
+本账号 9 次提交的**去重错误签名**，按时间排列。这是"通用 Ascend C 写法在此平台上具体错在哪"的一手证据。
+
+| ID | 状态 | 关键信息 |
+|---|---|---|
+| 413801 | Compile Error | `WARNING: kernel type of __global__ func: batch_matmul_max_sum_custom(...) is not marked. auto type derivate may be failed.` → 随后 `ld.lld: error: Error: the type of kern...` |
+| 413845 | TLE | （无消息） |
+| 414065 | Compile Error | `'SetSysWorkspace' is deprecated`（`kernel_operator_common_impl.h:28`）+ **`error: no matching function for call to 'GetSysWorkSpacePtr'`**（`kernel.asc:135`） |
+| 414141 | Compile Error | **`error: no matching function for call to 'ReduceSum'`**（`kernel.asc:139`）；候选：`reduce.h:240` "couldn't infer template argument **'pattern'**"；`kernel_operator_vec_reduce_intf_impl.h:935` "could not match **'LocalTensor' against 'TBuf'**"；`reduce.h:216` 需 **5 个参数**（实际给 4 个）；其余候选需 6 个 |
+| 414177 | Compile Error | 前面同 F4 的 warning，真正致命的是 `fatal error: error in backend: **not support bf16 type cast**`（见 F6） |
+| 414235 | Runtime Error | `aclrtSynchronizeStreamWithTimeout failed, ret=**507035**` + `Get profiling data failed` |
+| 414293 | Runtime Error | `aclrtSynchronizeStreamWithTimeout failed, ret=**507046**` + `Get profiling data failed` |
+| 414506 | TLE | 同 413845 |
+| 419799 | Runtime Error | 同 414293（`ret=507046`） |
+
+**可读出的推进轨迹**：编译错误（核类型未标记 → 废弃 workspace API → `ReduceSum` 签名/`pattern` 模板参数 → bf16 cast）
+→ **能编译并成功启动 kernel**（否则会像 F3 那样报 "0 launches"），但在执行阶段失败或超时（`507035` / `507046`）。
+
+**由此确立的下一步优先级**：当前瓶颈**不是性能优化，而是让单个 kernel 正确编译并跑完**。在拿到一次"精度通过"之前，讨论 tiling 与加速比没有意义。
+
+**待补**：`507035` / `507046` 的 ACL 官方含义（未取证）；`ReduceSum` 的正确调用形态（`pattern` 取值、目标须为 `LocalTensor`）。
+
 ---
 
 ## 待取证清单（不要凭记忆回答）
