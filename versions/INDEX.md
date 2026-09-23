@@ -8,3 +8,4 @@
 | v001 | `3c6f619449cf` | none | — | — | baseline: 组委会 kernel.asc 骨架，run_kernel 为空，不做任何计算 |
 | v002 | `6948a03e7504` | none | — | — | V0: __mix__(1,2) 单核融合，AIC 做 ND2NZ+Mmad+Fixpipe(L0C->GM)，AIV 从 GM 读回... |
 | v003 | `b2c2b086f781` | none | — | — | V0.1: 按编译器反馈修正——wsGm[offset] 直接作为张量实参（去掉多余 SetGlobalBuffer）；ReduceM... |
+| v004 | `f807d27cf8fa` | none | — | — | V1: 改用高阶 AscendC::Matmul API + host 侧 MultiCoreMatmulTiling；转置/尾块/l... |

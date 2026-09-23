@@ -1,0 +1,15 @@
+{
+  "version": "v004",
+  "file": "versions/kernel.v004.asc",
+  "sha256": "f807d27cf8faecc3839f2c95e771e1c737994519dea894d7f2c264fec2fea605",
+  "bytes": 14383,
+  "archived_at": "2026-09-23T06:53:33.865286+00:00",
+  "hypothesis": "V1: 改用高阶 AscendC::Matmul API + host 侧 MultiCoreMatmulTiling；转置/尾块/layout 全交 API；__mix__(1,2) AIC做矩阵乘到GM，AIV读回做 ReduceMax(AR)+ReduceSum(AR)",
+  "expected_effect": "编译通过并覆盖全部15点",
+  "local_verification": "none",
+  "local_verification_detail": "",
+  "official_submission_id": null,
+  "official_mean_score": null,
+  "ledger_round": null,
+  "notes": ""
+}
