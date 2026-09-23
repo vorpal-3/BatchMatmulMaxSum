@@ -14,3 +14,7 @@ work/build/
 # --- scratch ---
 __pycache__/
 *.pyc
+
+# --- live CANNJudge session token: never commit ---
+.secrets/
+ledger/best_times.*.json
