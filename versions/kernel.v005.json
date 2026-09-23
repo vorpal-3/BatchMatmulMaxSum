@@ -1,0 +1,15 @@
+{
+  "version": "v005",
+  "file": "versions/kernel.v005.asc",
+  "sha256": "7efd8a89fac72271d233fb8802983e3c523ab3e4a0c7d74ae52252fa46a695be",
+  "bytes": 14502,
+  "archived_at": "2026-09-23T08:02:37.216579+00:00",
+  "hypothesis": "v005 = v004 + __kfc_workspace__ workspace 传参（修 ret=507015：Matmul API 拿到空 sys workspace）",
+  "expected_effect": "编译通过；运行期错误消除",
+  "local_verification": "compiled-on-device",
+  "local_verification_detail": "CANNLab bmms_cpu 实例 (cann_9_0_0-py3.12-a5-arm)，CANN 9.0.0 / bisheng clang 15.0.5，与判题机同版本；cmake EXIT=0, make EXIT=0, Built target batch_matmul_max_sum_custom",
+  "official_submission_id": null,
+  "official_mean_score": null,
+  "ledger_round": null,
+  "notes": ""
+}

@@ -107,10 +107,19 @@ def cmd_archive(args) -> int:
     if args.local_verification not in VERIFICATION_LEVELS:
         print(f"ERROR: --local-verification must be one of {VERIFICATION_LEVELS}", file=sys.stderr)
         return 2
+    # Device-level verification must come with its evidence. This machine cannot
+    # compile or run Ascend C, so such a claim can only be earned on the CANNLab
+    # instance (same CANN/bisheng version as the judge) — and that is exactly why
+    # the detail is mandatory rather than the claim being refused outright.
     if args.local_verification in ("compiled-on-device", "precision-on-device"):
-        print("ERROR: this machine cannot compile or run Ascend C (no NPU, no CANN toolkit); "
-              "record device results with --annotate after the CANNLab run instead.", file=sys.stderr)
-        return 2
+        if not args.verification_detail:
+            print("ERROR: device-level verification requires --verification-detail naming "
+                  "where and with which toolchain it was obtained (e.g. CANNLab instance, "
+                  "CANN 9.0.0, bisheng clang 15.0.5, cmake/make exit codes).", file=sys.stderr)
+            return 2
+        if "cann" not in args.verification_detail.lower():
+            print("ERROR: --verification-detail must name the CANN environment used.", file=sys.stderr)
+            return 2
 
     data = KERNEL.read_bytes()
     digest = sha256_bytes(data)
